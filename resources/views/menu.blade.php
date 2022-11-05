@@ -51,12 +51,17 @@
                 class="border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6">Evaluate</a>
         </div>
     </nav>
-        <div class="w-full bg-gama-100 h-full">{{-- Contenido --}}
-            <div class="m-5 bg-gama-300 flex justify-center container ">
+
+        {{-- Contenido --}}
+            <div class="bg-gama-300 container max-w-screen-lg mx-auto px-5">
                 @yield('content')
-                <h3>Holaa</h3>
+                <h2 style="color:green">
+                    GeeksforGeeks
+                </h2>
+                <div class="container mx-auto flex justify-center">
+                    This is mx-auto class
+                </div>
             </div>
-        </div>
         {{-- @livewireScripts --}}
 </body>
 

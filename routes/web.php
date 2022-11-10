@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('menu');
-});
+    return view('aprender');
+})->name('aprender');
+
+Route::get('/practicar', function () {
+    return view('practica');
+})->name('practicar');
+
+Route::get('/evaluar', function () {
+    return view('evaluacion');
+})->name('evaluar');

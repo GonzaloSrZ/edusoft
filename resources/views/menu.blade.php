@@ -24,7 +24,7 @@
                             '300': '#749f82', //3
                             '400': '#425f57', //4
                         },
-                        
+
 
                     }
                 }
@@ -38,31 +38,27 @@
 
 </head>
 
-<body class="">
+<body class="bg-gama-300">
     <nav class="bg-gama-400 shadow dark:bg-gray-800">
         <div class="container flex items-center justify-center p-6 mx-auto text-gama-100 capitalize dark:text-gray-300">
-            <a href="#"
-                class="text-gama-300 dark:text-gray-200 border-b-2 border-gama-300 mx-1.5 sm:mx-6">Aprendé!</a>
+            <a href="{{ route('aprender') }}"
+                class="{{ request()->routeIs('aprender') ? 'text-gama-300 dark:text-gray-200 border-b-2 border-gama-300 mx-1.5 sm:mx-6' : 'border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6' }}">Aprendé!</a>
 
-            <a href="#"
-                class="border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6">Practicá</a>
+            <a href="{{ route('practicar') }}"
+                class="{{ request()->routeIs('practicar') ? 'text-gama-300 dark:text-gray-200 border-b-2 border-gama-300 mx-1.5 sm:mx-6' : 'border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6' }}">Practicá</a>
 
-            <a href="#"
-                class="border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6">Evaluate</a>
+            <a href="{{ route('evaluar') }}"
+                class="{{ request()->routeIs('evaluar') ? 'text-gama-300 dark:text-gray-200 border-b-2 border-gama-300 mx-1.5 sm:mx-6' : 'border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6' }}">Evaluate</a>
         </div>
     </nav>
 
-        {{-- Contenido --}}
-            <div class="bg-gama-300 container max-w-screen-lg mx-auto px-5">
-                @yield('content')
-                <h2 style="color:green">
-                    GeeksforGeeks
-                </h2>
-                <div class="container mx-auto flex justify-center">
-                    This is mx-auto class
-                </div>
-            </div>
-        {{-- @livewireScripts --}}
+    {{-- Contenido --}}
+    <div class="bg-gama-300 container max-w-screen-lg mx-auto px-5">
+        @yield('content')
+        
+
+    </div>
+    {{-- @livewireScripts --}}
 </body>
 
 </html>

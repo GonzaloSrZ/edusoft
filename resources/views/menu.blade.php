@@ -41,6 +41,9 @@
 <body class="bg-gama-300">
     <nav class="bg-gama-400 shadow dark:bg-gray-800">
         <div class="container flex items-center justify-center p-6 mx-auto text-gama-100 capitalize dark:text-gray-300">
+            <a href="{{ route('index') }}"
+                class="{{ request()->routeIs('index') ? 'text-gama-300 dark:text-gray-200 border-b-2 border-gama-300 mx-1.5 sm:mx-6' : 'border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6' }}">INICIO</a>
+
             <a href="{{ route('aprender') }}"
                 class="{{ request()->routeIs('aprender') ? 'text-gama-300 dark:text-gray-200 border-b-2 border-gama-300 mx-1.5 sm:mx-6' : 'border-b-2 border-transparent hover:text-gama-300 dark:hover:text-gray-200 hover:border-gama-300 mx-1.5 sm:mx-6' }}">Aprendé!</a>
 
@@ -55,7 +58,7 @@
     {{-- Contenido --}}
     <div class="bg-gama-300 container max-w-screen-lg mx-auto px-5">
         @yield('content')
-        
+
 
     </div>
     {{-- @livewireScripts --}}

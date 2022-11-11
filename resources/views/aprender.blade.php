@@ -5,9 +5,7 @@
 <h2 style="color:green">
     VECTORES
 </h2>
-<div class="container mx-auto flex justify-center">
-    -
-</div>
+
 <div style="width: 100%;">
     <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
         <iframe title="Taller 2" frameborder="0" width="1200px" height="675px"

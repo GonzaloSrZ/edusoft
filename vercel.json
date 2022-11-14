@@ -9,6 +9,7 @@
     }],
     "env": {
         "APP_ENV": "production",
+        "APP_KEY": "base64:OXtsN9sTChazsQkWN8udvONQuHKPp3lUCQ2J6j00BqE=",
         "APP_DEBUG": "true",
         "APP_URL": "https://laurldetuproyecto.com",
         "APP_CONFIG_CACHE": "/tmp/config.php",

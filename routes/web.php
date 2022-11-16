@@ -21,6 +21,10 @@ Route::get('/aprender', function () {
     return view('aprender');
 })->name('aprender');
 
+Route::get('/evaluacion/index', function () {
+    return '/evaluacion/index.htm';
+})->name('evindex');
+
 
 Route::get('/practicar', function () {
     return view('practica');

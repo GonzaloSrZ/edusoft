@@ -19,10 +19,10 @@
                 extend: {
                     colors: {
                         'gama': {
-                            '100': '#cfff8d', // 1
-                            '200': '#a8e890', //2
-                            '300': '#749f82', //3
-                            '400': '#425f57', //4
+                            '100': '#FFF7E9',  //'#cfff8d', // 1
+                            '200': '#5F9DF7',            //'#a8e890', //2
+                            '300': '#FF731D',  //'#749f82', //3
+                            '400': '#1746A2',            //'#425f57', //4
                         },
 
 
@@ -38,7 +38,7 @@
 
 </head>
 
-<body class="bg-gama-300">
+<body class="bg-gama-200">
     <nav class="bg-gama-400 shadow dark:bg-gray-800">
         <div class="container flex items-center justify-center p-6 mx-auto text-gama-100 capitalize dark:text-gray-300">
             <a href="{{ route('index') }}"
@@ -56,7 +56,7 @@
     </nav>
 
     {{-- Contenido --}}
-    <div class="bg-gama-300 container max-w-screen-lg mx-auto px-5">
+    <div class="bg-gama-100 container max-w-screen-lg mx-auto px-5">
         @yield('content')
 
 

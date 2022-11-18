@@ -11,34 +11,12 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
-     @vite(['resources/css/app.css', 'resources/js/app.js'])   'resources/css/app.css',
+    @vite(['resources/css/app.scss', 'resources/js/app.js'])
     <!-- JavaScript Bundle with Popper -->
 
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'gama': {
-                            '100': '#FFF7E9', //'#cfff8d', // 1
-                            '200': '#5F9DF7', //'#a8e890', //2
-                            '300': '#FF731D', //'#749f82', //3
-                            '400': '#1746A2', //'#425f57', //4
-                        },
-
-
-                    }
-                }
-            }
-        }
-    </script>
 
     <!-- Styles -->
     {{-- @livewireStyles --}}
-    <!-- CSS only -->
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> --}}
 
 </head>
 
@@ -88,9 +66,6 @@
     </div>
     {{-- @livewireScripts --}}
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script> --}}
 </body>
 
 </html>

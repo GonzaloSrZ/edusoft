@@ -16,7 +16,7 @@ class HttpsProtocol
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->secure()) {
+        if (!$request->secure()) {
 
             return redirect()->secure($request->getRequestUri());
         }

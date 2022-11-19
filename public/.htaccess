@@ -6,11 +6,16 @@
     RewriteEngine On
 
     # Handle Authorization Header
-   # RewriteCond %{HTTP:Authorization} .
-   # RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+   RewriteCond %{HTTP:Authorization} .
+   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    #First rewrite any request to the wrong domain to use the correct one (here www.)
+    RewriteCond %{HTTP_HOST} ^www\.
+    RewriteRule ^(.*)$ https://edusoft.vercel.app/$1 [L,R=301]
+
+    #Now, rewrite to HTTPS:
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://edusoft.vercel.app/$1 [L,R=301]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d

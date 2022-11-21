@@ -1,12 +1,20 @@
 {
     "version": 2,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.5.2" }
+        "api/index.php": {
+            "runtime": "vercel-php@0.5.2"
+        }
     },
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        },
+        {
+            "src": "/evaluacion/(.*)",
+            "dest": "/public/evaluacion/index.htm"
+        }
+    ],
     "env": {
         "APP_ENV": "production",
         "APP_KEY": "base64:OXtsN9sTChazsQkWN8udvONQuHKPp3lUCQ2J6j00BqE=",

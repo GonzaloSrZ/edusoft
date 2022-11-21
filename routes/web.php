@@ -33,3 +33,7 @@ Route::get('/practicar', function () {
 Route::get('/evaluar', function () {
     return view('evaluacion');
 })->name('evaluar');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');

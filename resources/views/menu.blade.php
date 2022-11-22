@@ -8,10 +8,12 @@
     <title>S.E.E.A</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://edusoftseea.000webhostapp.com/build/assets/app.05d03605.css">
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
-     @vite(['resources/css/app.scss', 'resources/js/app.js']) 
+     {{-- @vite(['resources/css/app.scss', 'resources/js/app.js'])  --}}
+
     
     <!-- JavaScript Bundle with Popper -->
 
@@ -66,6 +68,8 @@
 
     </div>
     {{-- @livewireScripts --}}
+
+    <script src="https://edusoftseea.000webhostapp.com/build/assets/app.6cd44e53.js"></script>
 
 </body>
 

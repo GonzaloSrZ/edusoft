@@ -8,11 +8,11 @@
     <title>S.E.E.A</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://edusoftseea.000webhostapp.com/build/assets/app.05d03605.css">
+ <link rel="stylesheet" href="https://edusoftseea.000webhostapp.com/build/assets/app.fb632e42.css"> 
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
-    {{-- @vite(['resources/css/app.scss', 'resources/js/app.js'])  --}}
+    {{-- @vite(['resources/css/app.scss', 'resources/js/app.js']) --}}
 
 
     <!-- JavaScript Bundle with Popper -->
@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-blue-100">
+<body class="bg-light">
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid ">
             <a class="navbar-brand" href="#">Navbar</a>

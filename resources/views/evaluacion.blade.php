@@ -19,21 +19,4 @@
         </div>
     </div>
 
-    <script>
-        // importAll(require.context('/evaluacion', false));
-
-        function prueba() {
-
-            var ruta = "/evaluacion/index.htm";
-
-
-            var iframe = document.getElementById("frame1");
-
-            iframe.setAttribute("src", ruta);
-
-        }
-        //prueba();
-
-    </script>
-
 @stop

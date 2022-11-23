@@ -2,9 +2,13 @@
 
 @section('content')
 
-<h2 style="color:green">
-    VECTORES
+<h2 class="text-secondary">
+    Bienvenido a la clase sobre arreglos
 </h2>
+
+<p>
+    Con estos recursos ideados podrá aprender el contenido teórico básico sobre los Vectores y Matrices
+</p>
 
 <div style="width: 100%;">
     <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">

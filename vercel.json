@@ -9,10 +9,6 @@
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
-        },
-        {
-            "src": "/evaluacion/(.*)",
-            "dest": "/public/evaluacion/index.htm"
         }
     ],
     "env": {

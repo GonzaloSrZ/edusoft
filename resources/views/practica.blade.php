@@ -2,8 +2,6 @@
 
 @section('content')
 
-<h2 style="color:green">
-    -
-</h2>
+@livewire('vectores')
 
 @stop

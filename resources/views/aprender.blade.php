@@ -7,7 +7,7 @@
 </h2>
 
 <p>
-    Con estos recursos ideados podrá aprender el contenido teórico básico sobre los Vectores y Matrices
+    Con estos recursos podrás aprender el contenido teórico básico sobre los Vectores y Matrices
 </p>
 
 <div style="width: 100%;">

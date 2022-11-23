@@ -18,7 +18,7 @@
 
 
     <!-- Styles -->
-    {{-- @livewireStyles --}}
+    @livewireStyles 
 
 </head>
 
@@ -47,6 +47,7 @@
 
     {{-- Contenido --}}
     <div class="container">
+        <br>
         @yield('content')
 
 
@@ -61,7 +62,7 @@
             </div>
         </footer>
     </div>
-    {{-- @livewireScripts --}}
+    @livewireScripts
 
     <script src="https://edusoftseea.000webhostapp.com/build/assets/app.6cd44e53.js"></script>
 

@@ -66,6 +66,22 @@
 
     <script src="https://edusoftseea.000webhostapp.com/build/assets/app.6cd44e53.js"></script>
 
+    <script>
+        Livewire.on('alert', message =>{
+          console.log("escuchado");
+            Swal.fire(
+                'Bien hecho!',
+                message,
+                'success'
+            );
+        })
+
+        Livewire.on('alert2', message=> {
+          console.log("escuchado");
+            Swal.fire(message);
+        })
+    </script>
+
 </body>
 
 </html>

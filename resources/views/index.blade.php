@@ -3,7 +3,7 @@
 @section('content')
 
 <h2 class="text-secondary">
-    BIENVENIDOS A LA APLICACIÓN DE SOFTWARE EDUCATIVO SOBRE ARREGLOS
+    Bienvenidos al "Software Educativo para la Enseñanza de Arreglos"
 </h2>
 
 @stop

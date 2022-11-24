@@ -2,13 +2,7 @@
 
 @section('content')
 
-    <h2 style="color:green">
-
-    </h2>
-
-    <div class="container mx-auto flex justify-center">
-        -
-    </div>
+    <h2 class="text-secondary">Evaluación sobre los temas adquiridos previamente</h2>
 
     {{-- {{importAll(require.context('../public/', true));}} --}}
     <div style="width: 100%;">

@@ -18,14 +18,14 @@
 
 
     <!-- Styles -->
-    @livewireStyles 
+    @livewireStyles
 
 </head>
 
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg nav-pills bg-primary">
         <div class="container-fluid ">
-            {{-- <a class="navbar-brand" href="#">Navbar</a> --}}
+            <a class="navbar-brand text-light" href="#">S.E.E.A</a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,9 +66,10 @@
 
     <script src="https://edusoftseea.000webhostapp.com/build/assets/app.6cd44e53.js"></script>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        Livewire.on('alert', message =>{
-          console.log("escuchado");
+        Livewire.on('alert', message => {
+            console.log("escuchado");
             Swal.fire(
                 'Bien hecho!',
                 message,
@@ -76,11 +77,17 @@
             );
         })
 
-        Livewire.on('alert2', message=> {
-          console.log("escuchado");
-            Swal.fire(message);
+        Livewire.on('alert2', message => {
+            console.log("escuchado");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: message
+            })
         })
     </script>
+
+    @yield('js')
 
 </body>
 

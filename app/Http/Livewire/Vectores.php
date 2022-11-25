@@ -10,24 +10,29 @@ class Vectores extends Component
 
     public $n1, $n2, $n3, $n4, $n5;
 
-    public $b=true;
+    public $b = true;
 
-    public $opc=1;
+    public $opc = 1;
 
-    public $msj="";
+    public $msj = "";
+
+    public $i;
+
+    //public $aux, $aux2;
 
 
     public function render()
     {
-        if ($this->b){
+        if ($this->b) {
             $this->opGen();
-            $this->b=false;
+            $this->b = false;
         }
         return view('livewire.vectores');
     }
 
-    public function opGen(){
-        $this->opc = mt_rand(1, 2);
+    public function opGen()
+    {
+        $this->opc = mt_rand(1, 3);
         switch ($this->opc) {
             case 1:
                 $this->insertar();
@@ -35,52 +40,48 @@ class Vectores extends Component
             case 2:
                 $this->añadir();
                 break;
-            case 2:
-                echo "i es igual a 2";
+            case 3:
+                $this->eliminar();
                 break;
         }
-
     }
 
-    public function genVector()
+    public function genVector($n)
     {
         $this->arreglo = [];
         $this->arreglo = collect($this->arreglo);
 
 
-        for ($i = 1; $i <= 4; $i++) {
+        for ($i = 1; $i <= $n; $i++) {
             $num = mt_rand(1, 99);
             //$this->arreglo[] = $num;
             $this->arreglo->push($num);
         }
 
         $this->valor = mt_rand(1, 99);
-        $this->reset('n1','n2','n3','n4','n5',);
+        $this->reset('n1', 'n2', 'n3', 'n4', 'n5',);
     }
 
-    public function insertar(){
-        $this->genVector();
+    public function insertar()
+    {
+        $this->genVector(4);
         $this->arreglo = collect($this->arreglo)->toArray();
-        
-        
+
+
         sort($this->arreglo);
 
         $this->arreglo = collect($this->arreglo);
-        //$array = collect($array);
-        
-        //$this->arreglo=collect($array);
-        //$this->arreglo = collect($this->arreglo);
 
-        $this->msj="El vector generado se encuentra ordenado y vamos a INSERTAR el siguiente valor: ";
-
+        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a INSERTAR el siguiente valor: ";
     }
 
-    public function verifInsertar(){
+    public function verifInsertar()
+    {
         $arregloAux = collect($this->arreglo);
         $arregloAux->push($this->valor);
-        
-        
-        
+
+
+
         $arregloAux = collect($arregloAux)->toArray();
         sort($arregloAux);
         $arregloAux = collect($arregloAux);
@@ -90,22 +91,49 @@ class Vectores extends Component
     }
 
 
-    public function añadir(){
-        $this->genVector();
+    public function añadir()
+    {
+        $this->genVector(4);
         $this->arreglo = collect($this->arreglo);
 
-        $this->msj="En el vector que se ha generado vamos a AÑADIR el siguiente valor: ";
-
+        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a AÑADIR el siguiente valor: ";
     }
-    
-    public function verifAñadir(){
+
+    public function verifAñadir()
+    {
         $arregloAux = collect($this->arreglo);
         $arregloAux->push($this->valor);
         $this->verificar($arregloAux);
-
     }
 
-    public function opVerif(){
+    public function eliminar()
+    {
+        $this->genVector(6);
+        $this->arreglo = collect($this->arreglo)->toArray();
+
+        $this->i = mt_rand(0, 5);
+
+        $this->valor = $this->arreglo[$this->i];
+
+        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a ELIMINAR el siguiente valor: ";
+    }
+
+    public function verifEliminar()
+    {
+        $auxiliar = collect($this->arreglo)->toArray();
+        //$arregloAux->pull($this->i);
+        unset($auxiliar[$this->i]);
+        $arregloAux = collect();
+
+        foreach ($auxiliar as $value) {
+            $arregloAux->push($value);
+        }
+
+        $this->verificar($arregloAux);
+    }
+
+    public function opVerif()
+    {
         switch ($this->opc) {
             case 1:
                 $this->verifInsertar();
@@ -113,16 +141,15 @@ class Vectores extends Component
             case 2:
                 $this->verifAñadir();
                 break;
-            case 2:
-                echo "i es igual a 2";
+            case 3:
+                $this->verifEliminar();
                 break;
         }
-
     }
 
     public function verificar($arregloAux)
     {
-        
+        //$this->aux = collect($arregloAux);
         $control = [];
         $control = collect($control);
 
@@ -132,8 +159,9 @@ class Vectores extends Component
         $control->push($this->n4);
         $control->push($this->n5);
 
-        
-        if ($control==$arregloAux) {
+        //$this->aux2 = $control;
+
+        if ($control == $arregloAux) {
             $this->emit('alert', 'El vector está creado correctamente');
         } else {
             $this->emit('alert2', 'El vector creado es incorrecto');

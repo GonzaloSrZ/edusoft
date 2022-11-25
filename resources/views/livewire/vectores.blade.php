@@ -1,5 +1,5 @@
 <div>
-    <p>Según el siguiente vector: <b>[{{ implode(',', collect($arreglo)->toArray()) }}]</b></p>
+    <p>Dado el vector: <b>[{{ implode(',', collect($arreglo)->toArray()) }}]</b></p>
     <p>{{ $msj }}<b>{{$valor}}</b></p>
     <div class="row g-5">
             <div class="" style="width: 110px">
@@ -20,6 +20,10 @@
     </div>
 
     <br>
+
+    {{-- <p>{{implode(',', collect($aux)->toArray())}}</p>
+    <p>{{implode(',', collect($aux2)->toArray())}}</p>
+ --}}
 
     <button class="btn btn-secondary text-light" wire:click="opGen">Generar otro</button>
 

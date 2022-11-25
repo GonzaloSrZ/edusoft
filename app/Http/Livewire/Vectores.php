@@ -32,7 +32,7 @@ class Vectores extends Component
 
     public function opGen()
     {
-        $this->opc = mt_rand(1, 3);
+        $this->opc = mt_rand(1, 4);
         switch ($this->opc) {
             case 1:
                 $this->insertar();
@@ -42,6 +42,9 @@ class Vectores extends Component
                 break;
             case 3:
                 $this->eliminar();
+                break;
+            case 4:
+                $this->ordenar();
                 break;
         }
     }
@@ -106,6 +109,27 @@ class Vectores extends Component
         $this->verificar($arregloAux);
     }
 
+    public function ordenar()
+    {
+        $this->genVector(5);
+        $this->arreglo = collect($this->arreglo);
+        $this->valor = null;
+        $this->msj = "Recordemos como ORDENAR un vector de manera creciente, 
+        en este caso vamos a completar como quedaría el vector resultante. ";
+    }
+
+    public function verifOrdenar()
+    {
+        $arregloAux = collect($this->arreglo)->toArray();
+        
+        sort($arregloAux);
+
+        $arregloAux = collect($arregloAux);
+        $this->verificar($arregloAux);
+    }
+
+
+
     public function eliminar()
     {
         $this->genVector(6);
@@ -143,6 +167,9 @@ class Vectores extends Component
                 break;
             case 3:
                 $this->verifEliminar();
+                break;
+            case 4:
+                $this->verifOrdenar();
                 break;
         }
     }

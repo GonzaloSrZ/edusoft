@@ -32,7 +32,7 @@ class Vectores extends Component
 
     public function opGen()
     {
-        $this->opc = mt_rand(1, 4);
+        $this->opc = mt_rand(1, 5);
         switch ($this->opc) {
             case 1:
                 $this->insertar();
@@ -45,6 +45,9 @@ class Vectores extends Component
                 break;
             case 4:
                 $this->ordenar();
+                break;
+            case 5:
+                $this->asignar();
                 break;
         }
     }
@@ -135,7 +138,7 @@ class Vectores extends Component
         $this->genVector(6);
         $this->arreglo = collect($this->arreglo)->toArray();
 
-        $this->i = mt_rand(0, 5);
+        $this->i = mt_rand(0, 4);
 
         $this->valor = $this->arreglo[$this->i];
 
@@ -155,6 +158,27 @@ class Vectores extends Component
 
         $this->verificar($arregloAux);
     }
+    
+    public function asignar()
+    {
+        $this->genVector(5);
+        $this->arreglo = collect($this->arreglo)->toArray();
+
+        $this->i = mt_rand(0, 4);
+
+        $this->msj = "Vamos a modificar el vector dado y cargarlo cómo quedaría finalmente. 
+        Queremos ASIGNAR en la posición ". $this->i + 1 . " el valor: ";
+    }
+
+    public function verifAsignar()
+    {
+        $arregloAux = collect($this->arreglo)->toArray();
+
+        $arregloAux[$this->i]=$this->valor;
+        $arregloAux = collect($arregloAux);
+
+        $this->verificar($arregloAux);
+    }
 
     public function opVerif()
     {
@@ -170,6 +194,9 @@ class Vectores extends Component
                 break;
             case 4:
                 $this->verifOrdenar();
+                break;
+            case 5:
+                $this->verifAsignar();
                 break;
         }
     }

@@ -6,4 +6,8 @@
 
 @livewire('vectores')
 
+<br>
+
+@livewire('matrices')
+
 @stop

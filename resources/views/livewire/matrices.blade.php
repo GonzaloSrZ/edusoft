@@ -30,6 +30,8 @@
             <input type="number" wire:model.defer="n3" placeholder="M₁₃" class="form-control">
         </div>
     </div>
+    @if ($open)
+        
     <div class="row g-2 p-1 justify-content-center">
         <div class="" style="width: 75px">
             <input type="number" wire:model.defer="n4" placeholder="M₂₁" class="form-control">
@@ -52,7 +54,8 @@
             <input type="number" wire:model.defer="n9" placeholder="M₃₃" class="form-control">
         </div>
     </div>
-
+    
+    @endif
     <br>
 
     {{-- <p>{{implode(',', collect($aux)->toArray())}}</p>

@@ -10,7 +10,7 @@ class Matrices extends Component
 
     public $opc;
 
-    public $b = true;
+    public $b = true, $open=true;
 
     public $valor, $msj;
 
@@ -47,17 +47,17 @@ class Matrices extends Component
     public function opGen()
     {
         $this->filas=3;
-        $this->opc = mt_rand(1, 5);
-        $this->opc = 1;
+        $this->opc = mt_rand(1, 3);
+        //$this->opc = 3;
         switch ($this->opc) {
             case 1:
                 $this->asignar();
                 break;
             case 2:
-                $this->añadir();
+                $this->ordenar();
                 break;
             case 3:
-                $this->eliminar();
+                $this->diagonal();
                 break;
             case 4:
                 $this->ordenar();
@@ -71,6 +71,8 @@ class Matrices extends Component
     public function asignar()
     {
         $this->genMatriz(3,3);
+
+        $this->open=true;
 
         $this->i = mt_rand(0, 2);
         $this->j = mt_rand(0, 2);
@@ -89,6 +91,55 @@ class Matrices extends Component
 
         $this->verificar($arregloAux);
     }
+    
+    public function ordenar()
+    {
+        $this->genMatriz(3,3);
+
+        $this->open=true;
+
+        $this->valor=null;
+
+        $this->msj = "Vamos a ORDENAR la matriz obtenida según su primer columna y cargarla cómo quedaría finalmente.";
+    }
+
+    public function verifOrdenar()
+    {
+        $arregloAux = $this->arreglo;
+
+        sort($arregloAux);
+
+        $this->verificar($arregloAux);
+    }
+
+
+    public function diagonal()
+    {
+        $this->genMatriz(3,3);
+
+        $this->open=false;
+
+        $this->valor=null;
+
+        $this->msj = "Vamos a cargar la DIAGONAL PRINCIPAL de la matriz obtenida.";
+    }
+
+    public function verifDiagonal()
+    {
+        $arregloAux[] = $this->arreglo[0][0];
+        $arregloAux[] = $this->arreglo[1][1];
+        $arregloAux[] = $this->arreglo[2][2];
+
+        $control[]=$this->n1;
+        $control[]=$this->n2;
+        $control[]=$this->n3;
+
+        if ($control == $arregloAux) {
+            $this->emit('alert', 'La diagonal esta creada correctamente');
+        } else {
+            $this->emit('alert2', 'La diagonal creada es incorrecta');
+        }
+    }
 
     public function opVerif()
     {
@@ -97,10 +148,10 @@ class Matrices extends Component
                 $this->verifAsignar();
                 break;
             case 2:
-                $this->verifAñadir();
+                $this->verifOrdenar();
                 break;
             case 3:
-                $this->verifEliminar();
+                $this->verifDiagonal();
                 break;
             case 4:
                 $this->verifOrdenar();
@@ -129,9 +180,11 @@ class Matrices extends Component
         //$this->aux2 = $control;
 
         if ($control == $arregloAux) {
-            $this->emit('alert', 'El vector está creado correctamente');
+            $this->emit('alert', 'La matriz está creada correctamente');
         } else {
-            $this->emit('alert2', 'El vector creado es incorrecto');
+            $this->emit('alert2', 'La matriz creada es incorrecta');
         }
+        
     }
+
 }

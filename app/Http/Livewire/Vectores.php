@@ -166,7 +166,7 @@ class Vectores extends Component
 
         $this->i = mt_rand(0, 4);
 
-        $this->msj = "Vamos a modificar el vector dado y cargarlo cómo quedaría finalmente. 
+        $this->msj = "Vamos a modificar el vector obtenido y cargarlo cómo quedaría finalmente. 
         Queremos ASIGNAR en la posición ". $this->i + 1 . " el valor: ";
     }
 

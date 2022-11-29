@@ -8,13 +8,13 @@ class Matrices extends Component
 {
     public $arreglo=[];
 
-    public $opc;
+    public $opc=0;
 
     public $b = true, $open=true;
 
     public $valor, $msj;
 
-    public $n1,$n2,$n3,$n4,$n5,$n6,$n7,$n8,$n9;
+    public $n1,$n2,$n3,$n4,$n5,$n6,$n7,$n8,$n9,$d1,$d2,$d3;
 
     public $filas, $columnas;
 
@@ -41,14 +41,19 @@ class Matrices extends Component
         }
 
         $this->valor = mt_rand(1, 99);
-        $this->reset('n1', 'n2', 'n3', 'n4', 'n5','n6','n7','n8','n9');
+        $this->reset('n1', 'n2', 'n3', 'n4', 'n5','n6','n7','n8','n9','d1','d2','d3');
     }
 
     public function opGen()
     {
         $this->filas=3;
-        $this->opc = mt_rand(1, 3);
-        //$this->opc = 3;
+
+        $opcion = mt_rand(1, 3);
+        while($opcion == $this->opc){
+            $opcion = mt_rand(1,3);
+        }
+        $this->opc = $opcion;
+
         switch ($this->opc) {
             case 1:
                 $this->asignar();
@@ -130,9 +135,9 @@ class Matrices extends Component
         $arregloAux[] = $this->arreglo[1][1];
         $arregloAux[] = $this->arreglo[2][2];
 
-        $control[]=$this->n1;
-        $control[]=$this->n2;
-        $control[]=$this->n3;
+        $control[]=$this->d1;
+        $control[]=$this->d2;
+        $control[]=$this->d3;
 
         if ($control == $arregloAux) {
             $this->emit('alert', 'La diagonal esta creada correctamente');

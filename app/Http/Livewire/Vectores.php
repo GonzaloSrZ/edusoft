@@ -12,7 +12,7 @@ class Vectores extends Component
 
     public $b = true;
 
-    public $opc = 1;
+    public $opc = 0;
 
     public $msj = "";
 
@@ -32,7 +32,12 @@ class Vectores extends Component
 
     public function opGen()
     {
-        $this->opc = mt_rand(1, 5);
+        $opcion = mt_rand(1, 5);
+        while($opcion == $this->opc){
+            $opcion = mt_rand(1,5);
+        }
+        $this->opc = $opcion;
+
         switch ($this->opc) {
             case 1:
                 $this->insertar();

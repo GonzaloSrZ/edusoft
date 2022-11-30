@@ -2,12 +2,31 @@
 
 @section('content')
 
-<h2 class="text-secondary">Resuelva los ejercicios que se generan a continuación aplicando la teoría aprendida</h2>
+    <h2 class="text-primary text-center">Practicá resolviendo ejercicios con arreglos</h2>
 
-@livewire('vectores')
+    <p>En esta sección se generan ejercicios de manera automatica para resolverlos. 
+        Haciendo clic en "Generar" se genera un nuevo ejercicio y presionando el boton "Verificar" 
+        nos muestra un mensaje indicando si la resolución es correcta o incorrecta.</p>
 
-<br>
+    <div class="card w-100">
+        <div class="card-body bg-light">
+            <h3 class="card-title text-secondary text-center">
+                Vectores
+            </h3>
+            @livewire('vectores')
 
-@livewire('matrices')
+        </div>
+    </div>
+
+    <br>
+    <div class="card w-100">
+        <div class="card-body bg-light">
+            <h3 class="card-title text-secondary text-center">
+                Matrices
+            </h3>
+            @livewire('matrices')
+
+        </div>
+    </div>
 
 @stop

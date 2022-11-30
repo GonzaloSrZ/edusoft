@@ -14,7 +14,8 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
     {{-- @vite(['resources/css/app.scss', 'resources/js/app.js']) --}}
 
-    <!-- JavaScript Bundle with Popper -->
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/889b4f6c92.js" crossorigin="anonymous"></script>
 
 
     <!-- Styles -->
@@ -25,7 +26,7 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg nav-pills bg-primary">
         <div class="container-fluid ">
-            <a class="navbar-brand text-light" href="#">S.E.E.A</a> 
+            <a class="navbar-brand text-light" href="/">S.E.E.A</a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,13 +55,56 @@
     </div>
 
     <div class="">
-        <footer class="bg-primary flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="align-items-center">
+        {{-- <footer class="bg-primary flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> --}}
+            {{-- <div class="align-items-center">
 
                 <p class="mb-3 text-light mb-md-0 text-center"> 2022 | Todos los derechos reservados | Producido por
                     Gonzalez Guillermo y Suarez Gonzalo</p>
-            </div>
-        </footer>
+            </div> --}}
+            <footer class="text-center text-white bg-secondary mt-3" style="background-color: #f1f1f1;">
+                <!-- Grid container -->
+                <div class="container pt-1 ">
+                  <!-- Section: Social media -->
+                  <section class="mb-1">
+                    <!-- Facebook -->
+                    {{-- <a
+                      class="btn btn-link btn-floating btn-lg text-dark m-1"
+                      href="#!"
+                      role="button"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a> --}}
+              
+                    
+                    <!-- Instagram -->
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-light m-1"
+                      href="https://www.instagram.com/guilli_00"
+                      target="_blank"
+                      role="button"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a
+                      class="btn btn-link btn-floating btn-lg text-light m-1"
+                      href="https://www.instagram.com/gon.zalo.srz"
+                      target="_blank"
+                      role="button"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+              
+                  </section>
+                  <!-- Section: Social media -->
+                </div>
+                <!-- Grid container -->
+              
+                <!-- Copyright -->
+                <div class="text-center text-light p-3 bg-primary" style="">
+                    2022 | Todos los derechos reservados | Producido por
+                    Gonzalez Guillermo y Suarez Gonzalo
+                </div>
+                <!-- Copyright -->
+              </footer>
+        {{-- </footer> --}}
     </div>
     @livewireScripts
 

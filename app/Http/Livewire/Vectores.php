@@ -83,7 +83,8 @@ class Vectores extends Component
 
         $this->arreglo = collect($this->arreglo);
 
-        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a INSERTAR el siguiente valor: ";
+        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a INSERTAR
+        un valor y a cargar el vector resultante. El valor a insertar es: ";
     }
 
     public function verifInsertar()
@@ -107,7 +108,8 @@ class Vectores extends Component
         $this->genVector(4);
         $this->arreglo = collect($this->arreglo);
 
-        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a AÑADIR el siguiente valor: ";
+        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a AÑADIR un valor
+        y a cargar el vector resultante. El valor a añadir es: ";
     }
 
     public function verifAñadir()
@@ -147,7 +149,8 @@ class Vectores extends Component
 
         $this->valor = $this->arreglo[$this->i];
 
-        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a ELIMINAR el siguiente valor: ";
+        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a ELIMINAR un valor
+        y a cargar como quedaria el vector resultante. El valor a eliminar es: ";
     }
 
     public function verifEliminar()

@@ -25,7 +25,7 @@
     <p>{{implode(',', collect($aux2)->toArray())}}</p> --}}
 
 
-    <button class="btn btn-secondary text-light" wire:click="opGen">Generar otro</button>
+    <button class="btn btn-secondary text-light" wire:click="opGen">Generar</button>
 
     <button class="btn btn-dark text-light" wire:click="opVerif">Verificar</button>
 

@@ -34,8 +34,7 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <iframe src="https://giphy.com/embed/MDxPrqREJbYFX5Cvav" width="480" height="480" frameBorder="0"
-                class="giphy-embed" allowFullScreen></iframe>
+            <img src="https://edusoftseea.000webhostapp.com/imagenes/welcome.gif" class="img-fluid" alt="...">
         </div>
     </div>
 

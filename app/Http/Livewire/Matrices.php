@@ -89,8 +89,7 @@ class Matrices extends Component
         
         $this->valor = mt_rand(1, 99);
 
-        $this->msj = "Vamos a modificar la matriz obtenida y cargarla cómo quedaría finalmente. 
-        Queremos ASIGNAR en la posición [". $this->i + 1 . ",".$this->j + 1 ."] el valor: ";
+        $this->msj = "ASIGNAR en la posición [". $this->i + 1 . ",".$this->j + 1 ."] el valor: ";
     }
 
     public function verifAsignar()
@@ -110,7 +109,7 @@ class Matrices extends Component
 
         $this->valor=null;
 
-        $this->msj = "Vamos a ORDENAR la matriz obtenida según su primer columna y cargarla cómo quedaría finalmente.";
+        $this->msj = "ORDENAR dicha matriz según su primer columna e indicar como quedaría la matriz resultante.";
     }
 
     public function verifOrdenar()
@@ -131,7 +130,7 @@ class Matrices extends Component
 
         $this->valor=null;
 
-        $this->msj = "Vamos a cargar la DIAGONAL PRINCIPAL de la matriz obtenida.";
+        $this->msj = "Cargar la DIAGONAL PRINCIPAL de dicha matriz.";
     }
 
     public function verifDiagonal()
@@ -248,9 +247,9 @@ class Matrices extends Component
         $this->aux2 = $control;
 
         if ($control == $arregloAux) {
-            $this->emit('alert', 'La matriz está creada correctamente');
+            $this->emit('alert', 'Resolviste correctamente el ejercicio. Felicitaciones!.');
         } else {
-            $this->emit('alert2', 'La matriz creada es incorrecta');
+            $this->emit('alert2', 'El ejercicio fue resuelto de manera incorrecta. Sigue practicando.');
         }
         
     }

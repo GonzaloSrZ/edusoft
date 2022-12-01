@@ -83,8 +83,8 @@ class Vectores extends Component
 
         $this->arreglo = collect($this->arreglo);
 
-        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a INSERTAR
-        un valor y a cargar el vector resultante. El valor a insertar es: ";
+        $this->msj = "Vamos a ACTUALIZAR dicho vector usando el método de INSERTAR un valor
+        y cargar el vector resultante. El valor a insertar es: ";
     }
 
     public function verifInsertar()
@@ -108,8 +108,8 @@ class Vectores extends Component
         $this->genVector(4);
         $this->arreglo = collect($this->arreglo);
 
-        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a AÑADIR un valor
-        y a cargar el vector resultante. El valor a añadir es: ";
+        $this->msj = "Vamos a ACTUALIZAR dicho vector usando el método de AÑADIR un valor
+        y cargar el vector resultante. El valor a añadir es: ";
     }
 
     public function verifAñadir()
@@ -124,8 +124,8 @@ class Vectores extends Component
         $this->genVector(5);
         $this->arreglo = collect($this->arreglo);
         $this->valor = null;
-        $this->msj = "Recordemos como ORDENAR un vector de manera creciente, 
-        en este caso vamos a completar como quedaría el vector resultante. ";
+        $this->msj = "ORDENAR dicho vector de manera creciente e 
+        indicar cómo quedaría el vector resultante. ";
     }
 
     public function verifOrdenar()
@@ -149,8 +149,8 @@ class Vectores extends Component
 
         $this->valor = $this->arreglo[$this->i];
 
-        $this->msj = "Para ACTUALIZAR un vector se pueden usar 3 metodos, en este caso vamos a ELIMINAR un valor
-        y a cargar como quedaria el vector resultante. El valor a eliminar es: ";
+        $this->msj = "Vamos a ACTUALIZAR dicho vector usando el método de ELIMINAR un valor
+        y cargar como quedaria el vector resultante. El valor a eliminar es: ";
     }
 
     public function verifEliminar()
@@ -174,8 +174,7 @@ class Vectores extends Component
 
         $this->i = mt_rand(0, 4);
 
-        $this->msj = "Vamos a modificar el vector obtenido y cargarlo cómo quedaría finalmente. 
-        Queremos ASIGNAR en la posición ". $this->i + 1 . " el valor: ";
+        $this->msj = "ASIGNAR en la posición ". $this->i + 1 . " el valor: ";
     }
 
     public function verifAsignar()
@@ -224,9 +223,9 @@ class Vectores extends Component
         //$this->aux2 = $control;
 
         if ($control == $arregloAux) {
-            $this->emit('alert', 'El vector está creado correctamente');
+            $this->emit('alert', 'Resolviste correctamente el ejercicio. Felicitaciones!.');
         } else {
-            $this->emit('alert2', 'El vector creado es incorrecto');
+            $this->emit('alert2', 'El ejercicio fue resuelto de manera incorrecta. Sigue practicando.');
         }
     }
 }

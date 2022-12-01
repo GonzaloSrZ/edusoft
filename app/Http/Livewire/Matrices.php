@@ -144,9 +144,9 @@ class Matrices extends Component
         $control[]=$this->d3;
 
         if ($control == $arregloAux) {
-            $this->emit('alert', 'La diagonal esta creada correctamente');
+            $this->emit('alert', 'Resolviste correctamente el ejercicio. Felicitaciones!.');
         } else {
-            $this->emit('alert2', 'La diagonal creada es incorrecta');
+            $this->emit('alert2', 'El ejercicio fue resuelto de manera incorrecta. Sigue practicando.');
         }
     }
     
@@ -204,6 +204,8 @@ class Matrices extends Component
         foreach ($auxiliar as $value) {
             $arregloAux[]=$value;
         }
+
+        sort($arregloAux);
 
         $this->verificar($arregloAux);
     }

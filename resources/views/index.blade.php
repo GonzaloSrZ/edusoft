@@ -17,7 +17,7 @@ Inicio
                 <div class="card-body">
                     <h5 class="card-title text-secondary">Introducción</h5>
                     <p class="card-text">Está aplicación está elaborada con el fin de poder obtener los conocimientos necesarios
-                        sobre los arreglos. A continuación podrá ver las secciones que se incluyen.
+                        sobre los arreglos unidimensionales (vectores) y bidimensionales (matrices). A continuación podrá ver las secciones que se incluyen.
                     </p>
                 </div>
             </div>

@@ -112,7 +112,7 @@
                 <br>
                 Todos los derechos reservados
                 <br>
-                2022
+                Noviembre, 2022
             </div>
             <!-- Copyright -->
         </footer>

@@ -144,9 +144,9 @@ class Matrices extends Component
         $control[]=$this->d3;
 
         if ($control == $arregloAux) {
-            $this->emit('alert', 'La diagonal esta creada correctamente');
+            $this->emit('alert', 'La diagonal esta creada correctamente.');
         } else {
-            $this->emit('alert2', 'La diagonal creada es incorrecta');
+            $this->emit('alert2', 'La diagonal creada es incorrecta.');
         }
     }
     
@@ -164,8 +164,8 @@ class Matrices extends Component
 
         sort($this->arreglo);
 
-        $this->msj = "M está ordenada según su primera columna. 
-        Vamos INSERTAR una fila en la matriz obtenida y cargarla cómo quedaría finalmente. La fila a insertar es: ";
+        $this->msj = "La matriz M está ordenada según su primera columna. 
+        Vamos INSERTAR una fila en dicha matriz y cargar la matriz resultante. La fila a insertar es: ";
     }
 
     public function verifInsertar()
@@ -191,8 +191,8 @@ class Matrices extends Component
 
         $this->valor=$this->arreglo[$this->i][0];
 
-        $this->msj = "M está ordenada según su primera columna. Vamos a ELIMINAR un valor en la matriz obtenida
-         y cargarla cómo quedaría finalmente. El valor a eliminar es: ";
+        $this->msj = "La matriz M está ordenada según su primera columna. Vamos a ELIMINAR un valor de dicha matriz
+         y cargar la matriz resultante. El valor a eliminar es: ";
     }
 
     public function verifEliminar()

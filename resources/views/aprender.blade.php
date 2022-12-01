@@ -41,7 +41,7 @@ Aprendé
                 <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
                     <iframe title="Matrices" frameborder="0" width="1200px" height="675px"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                        src="https://view.genial.ly/6387a0b386d20e0012e9786e/learning-experience-didactic-unit-matrices" type="text/html" allowscriptaccess="always"
+                        src="https://view.genial.ly/6387a0b386d20e0012e9786e" type="text/html" allowscriptaccess="always"
                         allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
                 </div>
             </div>

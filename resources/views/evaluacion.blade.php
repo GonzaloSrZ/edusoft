@@ -1,5 +1,9 @@
 @extends('menu')
 
+@section('titulo')
+Evaluate
+@stop
+
 @section('content')
 
     <h2 class="text-primary text-center">Evaluación sobre los temas adquiridos previamente</h2>

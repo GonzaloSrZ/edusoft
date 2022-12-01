@@ -1,5 +1,9 @@
 @extends('menu')
 
+@section('titulo')
+Practicá
+@stop
+
 @section('content')
 
     <h2 class="text-primary text-center">Practicá resolviendo ejercicios con arreglos</h2>

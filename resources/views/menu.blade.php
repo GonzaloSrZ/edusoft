@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>S.E.E.A</title>
+    <link rel="icon" type="image/x-icon" href="https://edusoftseea.000webhostapp.com/imagenes/seea2.png">
+    <title>S.E.E.A | @yield('titulo')</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://edusoftseea.000webhostapp.com/build/assets/app.fb632e42.css">
@@ -26,7 +27,10 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg nav-pills bg-primary">
         <div class="container-fluid ">
-            <a class="navbar-brand text-light" href="/">S.E.E.A</a> 
+            <a class=" text-light" href="/">
+                <img src="https://edusoftseea.000webhostapp.com/imagenes/seea2.png" width="60" height="60"s>
+
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,16 +60,16 @@
 
     <div class="">
         {{-- <footer class="bg-primary flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> --}}
-            {{-- <div class="align-items-center">
+        {{-- <div class="align-items-center">
 
                 <p class="mb-3 text-light mb-md-0 text-center"> 2022 | Todos los derechos reservados | Producido por
                     Gonzalez Guillermo y Suarez Gonzalo</p>
             </div> --}}
-            <footer class="text-center text-white bg-secondary mt-3" style="background-color: #f1f1f1;">
-                <!-- Grid container -->
-                <div class="container pt-1 ">
-                  <!-- Section: Social media -->
-                  <section class="mb-1">
+        <footer class="text-center text-white bg-secondary mt-3" style="background-color: #f1f1f1;">
+            <!-- Grid container -->
+            <div class="container pt-1 ">
+                <!-- Section: Social media -->
+                <section class="mb-1">
                     <!-- Facebook -->
                     {{-- <a
                       class="btn btn-link btn-floating btn-lg text-dark m-1"
@@ -74,36 +78,29 @@
                       data-mdb-ripple-color="dark"
                       ><i class="fab fa-facebook-f"></i
                     ></a> --}}
-              
-                    
+
+
                     <!-- Instagram -->
-                    <a
-                      class="btn btn-link btn-floating btn-lg text-light m-1"
-                      href="https://www.instagram.com/guilli_00"
-                      target="_blank"
-                      role="button"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-                    <a
-                      class="btn btn-link btn-floating btn-lg text-light m-1"
-                      href="https://www.instagram.com/gon.zalo.srz"
-                      target="_blank"
-                      role="button"
-                      ><i class="fab fa-instagram"></i
-                    ></a>
-              
-                  </section>
-                  <!-- Section: Social media -->
-                </div>
-                <!-- Grid container -->
-              
-                <!-- Copyright -->
-                <div class="text-center text-light p-3 bg-primary" style="">
-                    2022 | Todos los derechos reservados | Producido por
-                    Gonzalez Guillermo y Suarez Gonzalo
-                </div>
-                <!-- Copyright -->
-              </footer>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                        href="https://www.instagram.com/guilli_00" target="_blank" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                    <img src="https://edusoftseea.000webhostapp.com/imagenes/seea2.png" width="100" height="100"s>
+                    <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                        href="https://www.instagram.com/gon.zalo.srz" target="_blank" role="button"><i
+                            class="fab fa-instagram"></i></a>
+
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center text-light p-3 bg-primary" style="">
+                2022 | Todos los derechos reservados | Producido por
+                Gonzalez Guillermo y Suarez Gonzalo
+            </div>
+            <!-- Copyright -->
+        </footer>
         {{-- </footer> --}}
     </div>
     @livewireScripts

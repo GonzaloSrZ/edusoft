@@ -1,5 +1,9 @@
 @extends('menu')
 
+@section('titulo')
+Inicio
+@stop
+
 @section('content')
 
     <h2 class="text-primary text-center">

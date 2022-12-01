@@ -20,6 +20,8 @@ class Matrices extends Component
 
     public $i, $j;
 
+    public $aux=[],$aux2=[];
+
     public function render()
     {
         if ($this->b) {
@@ -31,6 +33,9 @@ class Matrices extends Component
 
     public function genMatriz($f,$c)
     {
+        $this->filas=$f;
+        $this->columnas=$c;
+
 
         for ($i = 0; $i < $f; $i++) {
             for($j = 0; $j < $c; $j++){
@@ -48,9 +53,9 @@ class Matrices extends Component
     {
         $this->filas=3;
 
-        $opcion = mt_rand(1, 3);
+        $opcion = mt_rand(1, 5);
         while($opcion == $this->opc){
-            $opcion = mt_rand(1,3);
+            $opcion = mt_rand(1,5);
         }
         $this->opc = $opcion;
 
@@ -65,10 +70,10 @@ class Matrices extends Component
                 $this->diagonal();
                 break;
             case 4:
-                $this->ordenar();
+                $this->insertar();
                 break;
             case 5:
-                $this->asignar();
+                $this->eliminar();
                 break;
         }
     }
@@ -145,6 +150,64 @@ class Matrices extends Component
             $this->emit('alert2', 'La diagonal creada es incorrecta');
         }
     }
+    
+    public function insertar()
+    {
+        $this->genMatriz(2,3);
+
+        $this->open=true;
+
+        $this->valor=[];
+
+        $this->valor[]=mt_rand(1, 99);
+        $this->valor[]=mt_rand(1, 99);
+        $this->valor[]=mt_rand(1, 99);
+
+        sort($this->arreglo);
+
+        $this->msj = "M está ordenada según su primera columna. 
+        Vamos INSERTAR una fila en la matriz obtenida y cargarla cómo quedaría finalmente. La fila a insertar es: ";
+    }
+
+    public function verifInsertar()
+    {
+        $arregloAux = $this->arreglo;
+
+        $arregloAux[] = $this->valor;
+
+        sort($arregloAux);
+
+        $this->verificar($arregloAux);
+    }
+    
+    public function eliminar()
+    {
+        $this->genMatriz(4,3);
+
+        $this->open=true;
+
+        sort($this->arreglo);
+
+        $this->i=mt_rand(0, 3);
+
+        $this->valor=$this->arreglo[$this->i][0];
+
+        $this->msj = "M está ordenada según su primera columna. Vamos a ELIMINAR un valor en la matriz obtenida
+         y cargarla cómo quedaría finalmente. El valor a eliminar es: ";
+    }
+
+    public function verifEliminar()
+    {
+        $auxiliar = $this->arreglo;
+        unset($auxiliar[$this->i]);
+        $arregloAux = [];
+
+        foreach ($auxiliar as $value) {
+            $arregloAux[]=$value;
+        }
+
+        $this->verificar($arregloAux);
+    }
 
     public function opVerif()
     {
@@ -159,17 +222,17 @@ class Matrices extends Component
                 $this->verifDiagonal();
                 break;
             case 4:
-                $this->verifOrdenar();
+                $this->verifInsertar();
                 break;
             case 5:
-                $this->verifAsignar();
+                $this->verifEliminar();
                 break;
         }
     }
 
     public function verificar($arregloAux)
     {
-        //$this->aux = collect($arregloAux);
+        $this->aux = collect($arregloAux);
         $control = [];
 
         $control[0][0]=$this->n1;
@@ -182,7 +245,7 @@ class Matrices extends Component
         $control[2][1]=$this->n8;
         $control[2][2]=$this->n9;
 
-        //$this->aux2 = $control;
+        $this->aux2 = $control;
 
         if ($control == $arregloAux) {
             $this->emit('alert', 'La matriz está creada correctamente');

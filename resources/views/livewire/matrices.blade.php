@@ -77,7 +77,15 @@
     <p>{{json_encode($aux2)}}</p>  --}}
 
 
-    <button class="btn btn-secondary text-light" wire:click="opGen">Generar</button>
+    <button class="btn btn-secondary text-white" wire:click="opGen">
+        <b>
+            Generar
+        </b>
+    </button>
 
-    <button class="btn btn-dark text-light" wire:click="opVerif">Verificar</button>
+    <button class="btn btn-dark text-white" wire:click="opVerif">
+        <b>
+            Verificar
+        </b>
+    </button>
 </div>

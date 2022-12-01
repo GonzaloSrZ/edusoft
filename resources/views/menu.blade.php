@@ -35,18 +35,22 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center alig-items-center" id="navbarNavAltMarkup">
+
+            <div class="collapse navbar-collapse largue justify-content-center alig-items-center"
+                id="navbarNavAltMarkup">
                 <div class="navbar-nav ">
                     <a class="{{ request()->routeIs('index') ? 'text-light bg-dark nav-link' : 'text-light nav-link' }}"
-                        aria-current="page" href="{{ route('index') }}">Inicio</a>
+                        aria-current="page" href="{{ route('index') }}"><b>Inicio</b></a>
                     <a class="{{ request()->routeIs('aprender') ? 'text-light bg-dark nav-link' : 'text-light nav-link' }}"
-                        href="{{ route('aprender') }}">Aprendé</a>
+                        href="{{ route('aprender') }}"><b>Aprendé</b></a>
                     <a class="{{ request()->routeIs('practicar') ? 'text-light bg-dark nav-link' : 'text-light nav-link' }}"
-                        href="{{ route('practicar') }}">Practicá</a>
+                        href="{{ route('practicar') }}"><b>Practicá</b></a>
                     <a class="{{ request()->routeIs('evaluar') ? 'text-light bg-dark nav-link' : 'text-light nav-link' }}"
-                        href="{{ route('evaluar') }}">Evaluate</a>
+                        href="{{ route('evaluar') }}"><b>Evaluate</b></a>
+
                 </div>
             </div>
+
         </div>
     </nav>
 
@@ -105,7 +109,7 @@
                 <a class="link-secondary" href="mailto:guillermogonzalez.edu@gmail.com">
                     guillermogonzalez.edu@gmail.com
                 </a>
-                 - 
+                -
                 <a class="link-secondary" href="mailto:gon.srz@gmail.com">
                     gon.srz@gmail.com
                 </a>

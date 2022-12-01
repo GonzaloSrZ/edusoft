@@ -7,7 +7,10 @@ Evaluate
 @section('content')
 
     <h2 class="text-primary text-center">Evaluación sobre los temas adquiridos previamente</h2>
-    <p>En esta sección resolve juegos autoevaluativos para calificar tus conocimientos obtenidos en las secciones anteriores.
+    <p>
+        <b>
+            En esta sección resolve juegos autoevaluativos para calificar tus conocimientos obtenidos en las secciones anteriores.
+        </b>
     </p>
 
     <div style="width: 100%;">

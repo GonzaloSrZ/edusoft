@@ -1,16 +1,21 @@
 @extends('menu')
 
 @section('titulo')
-Practicá
+    Practicá
 @stop
 
 @section('content')
 
     <h2 class="text-primary text-center">Practicá resolviendo ejercicios con arreglos</h2>
 
-    <p>En esta sección se generan, de manera automática, ejercicios para resolver. 
-        Haciendo clic en "Generar" se genera un nuevo ejercicio y presionando el botón "Verificar" 
-        nos muestra un mensaje indicando si la resolución es correcta o incorrecta.</p>
+    <p>
+        <b>
+
+            En esta sección se generan, de manera automática, ejercicios para resolver.
+            Haciendo clic en "Generar" se genera un nuevo ejercicio y presionando el botón "Verificar"
+            nos muestra un mensaje indicando si la resolución es correcta o incorrecta.
+        </b>
+    </p>
 
     <div class="card w-100">
         <div class="card-body bg-light">

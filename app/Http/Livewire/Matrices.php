@@ -35,6 +35,7 @@ class Matrices extends Component
     {
         $this->filas=$f;
         $this->columnas=$c;
+        $this->arreglo=[];
 
 
         for ($i = 0; $i < $f; $i++) {

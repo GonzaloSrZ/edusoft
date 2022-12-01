@@ -11,8 +11,10 @@ Aprendé
     </h2>
 
     <p>
-        En esta sección podrás aprender el contenido teórico básico sobre los Vectores y Matrices haciendo uso de los
-        recursos proporcionados a continuación
+        <b>
+            En esta sección podrás aprender el contenido teórico básico sobre los Vectores y Matrices haciendo uso de los
+            recursos proporcionados a continuación.
+        </b>
     </p>
 
     <div class="card w-100">

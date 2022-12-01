@@ -32,7 +32,7 @@ Inicio
                          Ejercicios que se autogeneran para aplicar los conocimientos obtenidos.
                     </p>
                     <p class="card-text"> <a href="{{ route('evaluar') }}" class="link-secondary">Evaluate:</a>
-                         Juegos autoevaluativos para calificar nuestros nuevos conocimientos sobre los temas.
+                         Juegos autoevaluativos para calificar los nuevos conocimientos sobre los temas.
                     </p>
                 </div>
             </div>

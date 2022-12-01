@@ -25,7 +25,7 @@
 </head>
 
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg nav-pills bg-primary">
+    <nav class="navbar fixed-top navbar-expand-lg nav-pills bg-primary">
         <div class="container-fluid ">
             <a class=" text-light" href="/">
                 <img src="https://edusoftseea.000webhostapp.com/imagenes/seea2.png" width="60" height="60"s>
@@ -51,7 +51,7 @@
     </nav>
 
     {{-- Contenido --}}
-    <div class="container">
+    <div class="container pt-5 mt-2">
         <br>
         @yield('content')
 
@@ -95,9 +95,24 @@
             <!-- Grid container -->
 
             <!-- Copyright -->
-            <div class="text-center text-light p-3 bg-primary" style="">
-                2022 | Todos los derechos reservados | Producido por
-                Gonzalez Guillermo y Suarez Gonzalo
+            <div class="text-center small text-light p-3 bg-primary" style="">
+
+                Aplicación realizada en el marco de la
+                Optativa II Informática Educativa de la
+                Licenciatura en Sistemas de Información, FCEyT – UNSE
+                <br>
+                Autores: Gonzalez Guillermo y Suarez Gonzalo | Contacto:
+                <a class="link-secondary" href="mailto:guillermogonzalez.edu@gmail.com">
+                    guillermogonzalez.edu@gmail.com
+                </a>
+                 - 
+                <a class="link-secondary" href="mailto:gon.srz@gmail.com">
+                    gon.srz@gmail.com
+                </a>
+                <br>
+                Todos los derechos reservados
+                <br>
+                2022
             </div>
             <!-- Copyright -->
         </footer>

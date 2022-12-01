@@ -16,7 +16,11 @@
         </div>
     </div>
 
-    <p>{{ $msj }}<b>{{ $valor }}</b></p>
+    <p>{{ $msj }}<b>
+        @if ($valor!=null)
+        {{ json_encode($valor) }}
+        @endif
+    </b></p>
 
     @if ($open)
         <div class="row g-2 p-1 justify-content-center">
@@ -69,8 +73,8 @@
     @endif
     <br>
 
-    {{-- <p>{{implode(',', collect($aux)->toArray())}}</p>
-    <p>{{implode(',', collect($aux2)->toArray())}}</p> --}}
+     {{-- <p>{{json_encode($aux)}}</p>
+    <p>{{json_encode($aux2)}}</p>  --}}
 
 
     <button class="btn btn-secondary text-light" wire:click="opGen">Generar</button>

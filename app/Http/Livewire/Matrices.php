@@ -205,6 +205,8 @@ class Matrices extends Component
             $arregloAux[]=$value;
         }
 
+        sort($arregloAux);
+
         $this->verificar($arregloAux);
     }
 
